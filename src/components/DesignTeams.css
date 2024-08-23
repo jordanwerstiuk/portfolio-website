@@ -1,0 +1,27 @@
+.designteams-container {
+    background: url('../../public/images/design_teams_bkgd_fancy_v2.png') center center/cover no-repeat;
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.2);
+    object-fit: contain;
+}
+
+.designteams-h1 {
+    text-align: center;
+    margin-top: 270px;
+    margin-bottom: -106px;
+    margin-left: -1100px;
+    font-size: 55px;
+    max-width: 300px;
+  }
+
+  .designteams-text {
+    text-align: left;
+    margin-left: -25px;
+    font-size: 20px;
+    max-width: 550px;
+  }

@@ -1,0 +1,108 @@
+img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -1;
+}
+
+.home-container {
+    background: url('../../public/images/ubc_image.jpg') center center/cover
+    no-repeat;
+    height: 82.5vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.2);
+    object-fit: contain;
+}
+
+.home-container > h1 {
+    color: #fff;
+    font-size: 80px;
+    margin-top: -25px;
+    margin-bottom: -15px;
+}
+
+.home-btns-row1 {
+    margin-top: 35px;
+    display: grid;
+    grid-template-columns: 1fr; /* One column */
+    grid-template-rows: 1fr; /* One row */
+    gap: 10px;
+    font-family: 'Oswald', sans-serif;
+}
+
+.home-btns-row2,
+.home-btns-row4 {
+    margin-top: 35px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 10px;
+    font-family: 'Oswald', sans-serif;
+}
+
+.home-btns-row3 {
+    margin-top: 35px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 10px;
+    font-family: 'Oswald', sans-serif;
+}
+
+.home-btns-row1 .btn {
+    margin: 10px;
+    width: 400px;
+    height: 200px;
+    display: inline-block;
+    font-family: 'Oswald', sans-serif;
+    margin-bottom: -20px;
+}
+
+.home-btns-row2 .btn {
+    margin: 10px;
+    width: 350px;
+    height: 200px;
+    display: inline-block;
+    font-family: 'Oswald', sans-serif;
+}
+
+.home-btns-row3 .btn,
+.home-btns-row4 .btn {
+    margin: 10px;
+    width: 350px;
+    height: 230px;
+    display: inline-block;
+    font-family: 'Oswald', sans-serif;
+}
+
+@media screen and (max-width: 960px) {
+    .home-container > h1 {
+        color: #fff;
+        font-size: 60px;
+        margin-top: -150px;
+    }
+
+    .home-btns .btn {
+        width: 275px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .home-container > h1 {
+        color: #fff;
+        font-size: 40px;
+        margin-top: -100px;
+    }
+
+    .btn-mobile {
+        display: block;
+        text-decoration: none;
+    }
+
+    .home-btns .btn {
+        width: 200px;
+    }
+}
