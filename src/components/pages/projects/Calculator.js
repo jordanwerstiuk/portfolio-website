@@ -1,11 +1,16 @@
 import React from "react";
-import CalcTitle from "../../projectComponents/projectTitles/CalcTitle";
+import "./Calculator.css";
 
 function Calculator() {
   return (
-    <>
-      <CalcTitle />
-    </>
+    <div>
+      <div className="calculator-container-title">
+        <h1 className="calculator-h1">STM32 CALCULATOR</h1>
+      </div>
+      <div className="calculator-container-main">
+        <h6 className="calculator-text">I am working on a calculator</h6>
+      </div>
+    </div>
   );
 }
 

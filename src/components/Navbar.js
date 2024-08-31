@@ -63,11 +63,11 @@ function Navbar() {
                 Home
               </Link>
             </li>
-            <li className="nav-item">
+            {/* <li className="nav-item">
               <Link to="/about" className="nav-links">
                 About
               </Link>
-            </li>
+            </li> */}
           </ul>
           {button && (
             <Button buttonStyle="btn--outline" onClick={scrollToBottom}>

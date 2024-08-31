@@ -1,6 +1,6 @@
 .website-container-title {
-    background: url('../../../../public/images/design_teams_bkgd_fancy_v2.png') center center/cover no-repeat;
-    height: 80vh;
+    background: url('../../../../public/images/website_title_background.png') center center/cover no-repeat;
+    height: 33vh;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -11,8 +11,8 @@
 }
 
 .website-container-main {
-  /* background: url('../../public/images/design_teams_bkgd_fancy_v2.png') center center/cover no-repeat; */
-  height: 80vh;
+  background: rgba(0, 0, 0, 0.595);
+  height: 120vh;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -24,16 +24,19 @@
 
 .website-h1 {
     text-align: center;
-    margin-top: 280px;
-    margin-bottom: -106px;
-    margin-left: -1100px;
-    font-size: 55px;
-    max-width: 300px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    font-size: 80px;
+    max-width: 1000px;
+    color: white;
   }
 
-  .website-text {
-    text-align: left;
-    margin-left: -25px;
+.website-text {
+    position: relative;
+    top: -360px;
+    left: -500px;
     font-size: 20px;
     max-width: 550px;
+    color: white;
   }

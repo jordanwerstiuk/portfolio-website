@@ -1,11 +1,16 @@
 import React from "react";
-import MotorControlTitle from "../../projectComponents/projectTitles/MotorControlTitle";
+import "./MotorControl.css";
 
 function MotorControl() {
   return (
-    <>
-      <MotorControlTitle />
-    </>
+    <div>
+      <div className="motorcontrol-container-title">
+        <h1 className="motorcontrol-h1">MOTOR CONTROL CIRCUIT</h1>
+      </div>
+      <div className="motorcontrol-container-main">
+        <h6 className="motorcontrol-text">I built a motor control circuit</h6>
+      </div>
+    </div>
   );
 }
 

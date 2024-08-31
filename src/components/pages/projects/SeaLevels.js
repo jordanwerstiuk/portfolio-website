@@ -1,11 +1,18 @@
 import React from "react";
-import SeaLevelsTitle from "../../projectComponents/projectTitles/SeaLevelsTitle";
+import "./SeaLevels.css";
 
 function SeaLevels() {
   return (
-    <>
-      <SeaLevelsTitle />
-    </>
+    <div>
+      <div className="sealevels-container-title">
+        <h1 className="sealevels-h1">SEA LEVELS PROGRAM</h1>
+      </div>
+      <div className="sealevels-container-main">
+        <h6 className="sealevels-text">
+          We made a program to do stuff with sea levels
+        </h6>
+      </div>
+    </div>
   );
 }
 
