@@ -18,7 +18,7 @@
   }
   
   .home {
-    background-image: url('C:/Users/jorda/react-portfolio-website/public/images/ubc_image.jpg');
+    background-image: url('../public/images/ubc_image.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;

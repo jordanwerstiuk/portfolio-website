@@ -1,18 +1,6 @@
 .website-container-title {
-    background: url('../../../../public/images/website_title_background.png') center center/cover no-repeat;
-    height: 33vh;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.2);
-    object-fit: contain;
-}
-
-.website-container-main {
-  background: rgba(0, 0, 0, 0.595);
-  height: 120vh;
+  background: url('../../../../public/images/website_title_background.png') center center/cover no-repeat;
+  height: 33vh;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -23,20 +11,60 @@
 }
 
 .website-h1 {
-    text-align: center;
-    margin-top: 10px;
-    margin-bottom: 0px;
-    margin-left: 0px;
-    font-size: 80px;
-    max-width: 1000px;
-    color: white;
-  }
+text-align: center;
+margin-top: 10px;
+margin-bottom: 0px;
+margin-left: 0px;
+font-size: 80px;
+max-width: 1000px;
+color: white;
+}
+
+.website-container-main {
+  background: rgba(244, 236, 236, 0.595);
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.2);
+  object-fit: contain;
+}
+
+.content-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* Aligns the text and image at the top */
+  max-width: 1200px; /* Adjust based on your design */
+  width: 100%; /* Ensure the content takes the full width */
+}
+
+.text-content {
+  flex: 1; /* Allows the text to take up available space */
+  margin-right: 20px; /* Space between text and image */
+}
+
+.image-content {
+  position: relative;
+  flex-shrink: 1; /* Prevents the image from shrinking */
+  max-width: 500px; /* Adjust this value based on your design */
+}
 
 .website-text {
+  font-size: 20px;
+  max-width: 550px;
+  color: rgb(0, 0, 0);
+  margin-bottom: 20px; /* Adds spacing between text blocks */
+  position: static; /* Remove any positioning */
+  top: auto; /* Reset top position */
+  left: auto; /* Reset left position */
+}
+
+  .website-image {
     position: relative;
-    top: -360px;
-    left: -500px;
-    font-size: 20px;
-    max-width: 550px;
-    color: white;
+    z-index: 10;
+    width: 100%; /* Makes the image responsive */
+    height: auto; /* Maintains aspect ratio */
+    object-fit: cover; /* Ensures the image covers the container */
   }
