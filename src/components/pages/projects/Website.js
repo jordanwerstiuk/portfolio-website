@@ -8,6 +8,9 @@ function Website() {
         <h1 className="website-h1">REACT WEBSITE</h1>
       </div>
       <div className="website-container-main">
+        <h5 className="date-text5">
+          May 2024 - Present
+        </h5>
         <div className="content-wrapper">
           <div className="text-content">
           <h6 className="website-text">
@@ -33,7 +36,7 @@ function Website() {
           </h6>
           </div>
           <div className="image-content">
-          <img src="/images/website_code_example.png" alt="Code image" className="website-image" />
+          <img src="/images/website_code_example.png" alt="Code snippet image" className="website-image" />
           </div>
         </div>
       </div>

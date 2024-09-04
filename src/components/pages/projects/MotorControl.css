@@ -1,18 +1,6 @@
 .motorcontrol-container-title {
-    background: url('../../../../public/images/website_title_background.png') center center/cover no-repeat;
-    height: 33vh;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.2);
-    object-fit: contain;
-}
-
-.motorcontrol-container-main {
-  background: rgba(0, 0, 0, 0.595);
-  height: 120vh;
+  background: url('../../../../public/images/lathe_photo.jpg') center center/cover no-repeat;
+  height: 33vh;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -22,21 +10,57 @@
   object-fit: contain;
 }
 
+.motorcontrol-container-main {
+  background: whitesmoke;
+  height: 120vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  object-fit: contain;
+}
+
 .motorcontrol-h1 {
-    text-align: center;
-    margin-top: 10px;
-    margin-bottom: 0px;
-    margin-left: 0px;
-    font-size: 80px;
-    max-width: 1000px;
-    color: white;
-  }
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  font-size: 70px;
+  max-width: 2000px;
+  color: white;
+}
+
+.content-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* Aligns the text and image at the top */
+  max-width: 1200px; /* Adjust based on your design */
+  width: 100%; /* Ensure the content takes the full width */
+}
+
+.image-content {
+  position: relative;
+  flex-shrink: 1; /* Prevents the image from shrinking */
+  max-width: 500px; /* Adjust this value based on your design */
+}
 
 .motorcontrol-text {
-    position: relative;
-    top: -360px;
-    left: -500px;
-    font-size: 20px;
-    max-width: 550px;
-    color: white;
-  }
+  position: relative;
+  top: 0px;
+  left: 0px;
+  font-size: 20px;
+  max-width: 550px;
+  color: black;
+  margin-right: 20px;
+  flex: 1;
+}
+
+.motorcontrol-image {
+  position: relative;
+  z-index: 10;
+  top: -80px;
+  width: 100%; /* Makes the image responsive */
+  height: auto; /* Maintains aspect ratio */
+  object-fit: cover; /* Ensures the image covers the container */
+}

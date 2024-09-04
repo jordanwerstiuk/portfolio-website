@@ -8,7 +8,17 @@ function Calculator() {
         <h1 className="calculator-h1">STM32 CALCULATOR</h1>
       </div>
       <div className="calculator-container-main">
-        <h6 className="calculator-text">I am working on a calculator</h6>
+        <h5 className="date-text">
+          April 2024 - Present
+        </h5>
+        <div className="content-wrapper">
+          <div className="text-content">
+            <h6 className="calculator-text">I machined a phone stand!!</h6>
+          </div>
+          <div className="image-content">
+            <img src="/images/holder_unfolded.jpg" alt="Code image" className="calculator-image" />
+          </div>
+        </div>
       </div>
     </div>
   );

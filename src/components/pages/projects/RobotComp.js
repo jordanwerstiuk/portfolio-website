@@ -8,10 +8,17 @@ function RobotComp() {
         <h1 className="robotcomp-h1">ROBOT COMPETITION 2024</h1>
       </div>
       <div className="robotcomp-container-main">
-        <h6 className="robotcomp-text">
-          Out of 15 teams, we finished runner-up in the closest final match up
-          imaginable!
-        </h6>
+      <h5 className="date-text">
+          May-August 2024
+        </h5>
+        <div className="content-wrapper">
+          <div className="text-content">
+            <h6 className="robotcomp-text">I machined a phone stand!!</h6>
+          </div>
+          <div className="image-content">
+            <img src="/images/holder_unfolded.jpg" alt="Code image" className="robotcomp-image" />
+          </div>
+        </div>
       </div>
     </div>
   );

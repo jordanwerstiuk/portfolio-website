@@ -8,9 +8,17 @@ function SeaLevels() {
         <h1 className="sealevels-h1">SEA LEVELS PROGRAM</h1>
       </div>
       <div className="sealevels-container-main">
-        <h6 className="sealevels-text">
-          We made a program to do stuff with sea levels
-        </h6>
+        <h5 className="date-text">
+          November 2023
+        </h5>
+        <div className="content-wrapper">
+          <div className="text-content">
+            <h6 className="sealevels-text">I machined a phone stand!!</h6>
+          </div>
+          <div className="image-content">
+            <img src="/images/holder_unfolded.jpg" alt="Code image" className="sealevels-image" />
+          </div>
+        </div>
       </div>
     </div>
   );

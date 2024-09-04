@@ -8,6 +8,9 @@ function Footer() {
       <section className="school-affiliations">
         <div className="school-affiliations-items"></div>
       </section>
+      <section className="thanks">
+        <p>Thank you for reading!</p>
+      </section>
       <section className="website-created">
         <p>Website created with React in 2024 by Jordan Werstiuk</p>
       </section>

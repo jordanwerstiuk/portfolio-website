@@ -11,13 +11,13 @@
 }
 
 .website-h1 {
-text-align: center;
-margin-top: 10px;
-margin-bottom: 0px;
-margin-left: 0px;
-font-size: 80px;
-max-width: 1000px;
-color: white;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  font-size: 80px;
+  max-width: 1000px;
+  color: white;
 }
 
 .website-container-main {
@@ -40,11 +40,6 @@ color: white;
   width: 100%; /* Ensure the content takes the full width */
 }
 
-.text-content {
-  flex: 1; /* Allows the text to take up available space */
-  margin-right: 20px; /* Space between text and image */
-}
-
 .image-content {
   position: relative;
   flex-shrink: 1; /* Prevents the image from shrinking */
@@ -56,15 +51,26 @@ color: white;
   max-width: 550px;
   color: rgb(0, 0, 0);
   margin-bottom: 20px; /* Adds spacing between text blocks */
-  position: static; /* Remove any positioning */
-  top: auto; /* Reset top position */
+  position: relative;
+  top: -80px;
   left: auto; /* Reset left position */
+  margin-right: 20px;
+  flex: 1;
 }
 
-  .website-image {
-    position: relative;
-    z-index: 10;
-    width: 100%; /* Makes the image responsive */
-    height: auto; /* Maintains aspect ratio */
-    object-fit: cover; /* Ensures the image covers the container */
-  }
+.website-image {
+  position: relative;
+  top: -80px;
+  z-index: 10;
+  width: 100%; /* Makes the image responsive */
+  height: auto; /* Maintains aspect ratio */
+  object-fit: cover; /* Ensures the image covers the container */
+}
+
+.date-text5 {
+  font-size: 25px;
+  left: -650px;
+  top: 12px;
+  position: relative;
+  flex: 1;
+}
