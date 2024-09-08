@@ -1,5 +1,5 @@
 .motorcontrol-container-title {
-  background: url('../../../../public/images/lathe_photo.jpg') center center/cover no-repeat;
+  background: url('../../../../public/images/motorcontrol_bkgd.png') center center/cover no-repeat;
   height: 33vh;
   width: 100%;
   display: flex;
@@ -8,11 +8,13 @@
   align-items: center;
   box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.2);
   object-fit: contain;
+  position: relative;
+  z-index: 2; 
 }
 
 .motorcontrol-container-main {
   background: whitesmoke;
-  height: 120vh;
+  height: 500vh;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -31,6 +33,55 @@
   color: white;
 }
 
+.motorcontrol-text {
+  position: relative;
+  text-align: justify;
+  margin-top: 0px;
+  left: 0px;
+  font-size: 20px;
+  max-width: 800px;
+  color: black;
+  margin-right: 20px;
+  flex: 1;
+}
+
+.motorcontrol-headers {
+  position: relative;
+  font-size: 23px;
+  color: black;
+  flex: 1;
+  text-align: left;
+  margin-top: 120px;
+  margin-bottom: 40px;
+}
+
+.h4 {
+  font-weight: 90;
+}
+
+.motorcontrol-image,
+.motorcontrol-image-left,
+.motorcontrol-image-right {
+  position: relative;
+  z-index: 10;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  width: 50%; /* Makes the image responsive */
+  max-width: 400px;
+  height: auto; /* Maintains aspect ratio */
+  object-fit: cover; /* Ensures the image covers the container */
+}
+
+.motorcontrol-image-left {
+  width: 80%;
+  left: 280px;
+}
+
+.motorcontrol-image-right {
+  width: 77%;
+  right: 180px;
+}
+
 .content-wrapper {
   display: flex;
   justify-content: space-between;
@@ -45,22 +96,32 @@
   max-width: 500px; /* Adjust this value based on your design */
 }
 
-.motorcontrol-text {
+.mc-date-text {
+  font-size: 25px;
+  left: -390px;
+  margin-top: 12px;
   position: relative;
-  top: 0px;
-  left: 0px;
-  font-size: 20px;
-  max-width: 550px;
-  color: black;
-  margin-right: 20px;
   flex: 1;
 }
 
-.motorcontrol-image {
-  position: relative;
-  z-index: 10;
-  top: -80px;
-  width: 100%; /* Makes the image responsive */
-  height: auto; /* Maintains aspect ratio */
-  object-fit: cover; /* Ensures the image covers the container */
+.mc-left-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 15%;
+  height: 100vh;
+  object-fit: cover;
+  opacity: 0.8;
+  z-index: 1;
+}
+
+.mc-right-image {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 15%;
+  height: 100vh;
+  object-fit: cover;
+  opacity: 0.8;
+  z-index: 1;
 }

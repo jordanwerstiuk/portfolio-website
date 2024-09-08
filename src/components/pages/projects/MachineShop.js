@@ -53,7 +53,7 @@ function MachineShop() {
           </div>
         </div>
         <h6 className="machineshop-text-bottom">
-              Here's the finished project! Even though it isn't perfect, I machined all the individual parts with sufficient accuracy that it can properly fold into a nice compact form.
+              Here's the finished project! I machined all the individual parts with accuracy, and as such it can properly fold into a nice compact form.
         </h6>
         <div className="content-wrapper">
           <div className="image-content">
