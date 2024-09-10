@@ -1,7 +1,10 @@
 .robotcomp-container-title {
-  background: url('../../../../public/images/lathe_photo.jpg') center center/cover no-repeat;
-  height: 33vh;
+  background: 
+  linear-gradient(to bottom, rgba(245, 245, 245, 0) 75%, white 100%), /* Adjust the transparency and stop values */
+  url('../../../../public/images/robotTeamPhotoBWnames3.jpg') center center/cover no-repeat;
+  height: 110vh;
   width: 100%;
+  margin-top: -50px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -12,18 +15,17 @@
 
 .robotcomp-container-main {
   background: whitesmoke;
-  height: 120vh;
+  height: 400vh;
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   object-fit: contain;
 }
 
 .robotcomp-h1 {
   text-align: center;
-  margin-top: 10px;
+  margin-top: -50px;
   margin-bottom: 0px;
   margin-left: 0px;
   font-size: 70px;
@@ -31,29 +33,19 @@
   color: white;
 }
 
-.content-wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start; /* Aligns the text and image at the top */
-  max-width: 1200px; /* Adjust based on your design */
-  width: 100%; /* Ensure the content takes the full width */
-}
-
-.image-content {
-  position: relative;
-  flex-shrink: 1; /* Prevents the image from shrinking */
-  max-width: 500px; /* Adjust this value based on your design */
-}
-
 .robotcomp-text {
   position: relative;
-  top: 0px;
+  top: 300px;
+  margin-bottom: 200px;
   left: 0px;
   font-size: 20px;
-  max-width: 550px;
+  max-width: 750px;
   color: black;
   margin-right: 20px;
-  flex: 1;
+  transition: opacity 0.8s ease;
+}
+.hidden {
+  opacity: 0;
 }
 
 .robotcomp-image {

@@ -1,24 +1,55 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./RobotComp.css";
 
 function RobotComp() {
+  const [visibility, setVisibility] = useState({
+    introtext1: false,
+    introtext2: false,
+    introtext3: false,
+  });
+
+  // Define the scroll thresholds for each element
+  const thresholds = {
+    introtext1: 525,
+    introtext2: 760,
+    introtext3: 995,
+  };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+
+      // Update the visibility based on scroll thresholds
+      setVisibility({
+        introtext1: scrollY > thresholds.introtext1,
+        introtext2: scrollY > thresholds.introtext2,
+        introtext3: scrollY > thresholds.introtext3,
+      });
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+
   return (
     <div>
       <div className="robotcomp-container-title">
         <h1 className="robotcomp-h1">ROBOT COMPETITION 2024</h1>
       </div>
       <div className="robotcomp-container-main">
-      <h5 className="date-text">
-          May-August 2024
-        </h5>
-        <div className="content-wrapper">
-          <div className="text-content">
-            <h6 className="robotcomp-text">I machined a phone stand!!</h6>
-          </div>
-          <div className="image-content">
-            <img src="/images/holder_unfolded.jpg" alt="Code image" className="robotcomp-image" />
-          </div>
-        </div>
+        <h6 className={`robotcomp-text ${!visibility.introtext1 ? "hidden" : ""}`}>
+          This is the first line of intro text.
+        </h6>
+        <h6 className={`robotcomp-text ${!visibility.introtext2 ? "hidden" : ""}`}>
+          This is the second line of intro text.
+        </h6>
+        <h6 className={`robotcomp-text ${!visibility.introtext3 ? "hidden" : ""}`}>
+          This is the third line of intro text.
+        </h6>
       </div>
     </div>
   );

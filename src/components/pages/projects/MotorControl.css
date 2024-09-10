@@ -14,7 +14,7 @@
 
 .motorcontrol-container-main {
   background: whitesmoke;
-  height: 500vh;
+  height: 800vh;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -33,7 +33,8 @@
   color: white;
 }
 
-.motorcontrol-text {
+.motorcontrol-text,
+.intro-text {
   position: relative;
   text-align: justify;
   margin-top: 0px;
@@ -45,14 +46,18 @@
   flex: 1;
 }
 
+.intro-text {
+  margin-top: -140px;
+}
+
 .motorcontrol-headers {
   position: relative;
   font-size: 23px;
   color: black;
   flex: 1;
   text-align: left;
-  margin-top: 120px;
-  margin-bottom: 40px;
+  margin-top: 0px;
+  margin-bottom: -160px;
 }
 
 .h4 {
@@ -61,7 +66,13 @@
 
 .motorcontrol-image,
 .motorcontrol-image-left,
-.motorcontrol-image-right {
+.motorcontrol-image-right,
+.mc-image-left3,
+.mc-image-right4,
+.limage-left5,
+.limage-right6,
+.bimage-left7,
+.bimage-right8 {
   position: relative;
   z-index: 10;
   margin-top: 40px;
@@ -73,13 +84,52 @@
 }
 
 .motorcontrol-image-left {
+  margin-top: -40px;
   width: 80%;
   left: 280px;
 }
 
 .motorcontrol-image-right {
+  margin-top: -40px;
   width: 77%;
   right: 180px;
+}
+
+.mc-image-left3 {
+  margin-top: 40px;
+  width: 170%;
+  left: 180px;
+}
+
+.mc-image-right4 {
+  margin-top: 40px;
+  width: 120%;
+  right: 180px;
+}
+
+.limage-left5 {
+  width: 140%;
+  margin-top: 8px;
+  left: 220px;
+}
+
+.limage-right6 {
+  width: 80%;
+  right: 160px;
+  margin-top: 10px;
+  margin-bottom: 150px;
+}
+
+.bimage-left7 {
+  width: 110%;
+  top: -150px;
+  left: 320px;
+}
+
+.bimage-right8{
+  width: 90%;
+  top: -150px;
+  right: 260px;
 }
 
 .content-wrapper {
