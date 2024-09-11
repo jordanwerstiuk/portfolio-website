@@ -5,14 +5,12 @@ function RobotComp() {
   const [visibility, setVisibility] = useState({
     introtext1: false,
     introtext2: false,
-    introtext3: false,
   });
 
   // Define the scroll thresholds for each element
   const thresholds = {
     introtext1: 525,
-    introtext2: 760,
-    introtext3: 995,
+    introtext2: 710,
   };
 
   useEffect(() => {
@@ -23,7 +21,6 @@ function RobotComp() {
       setVisibility({
         introtext1: scrollY > thresholds.introtext1,
         introtext2: scrollY > thresholds.introtext2,
-        introtext3: scrollY > thresholds.introtext3,
       });
     };
 
@@ -42,14 +39,26 @@ function RobotComp() {
       </div>
       <div className="robotcomp-container-main">
         <h6 className={`robotcomp-text ${!visibility.introtext1 ? "hidden" : ""}`}>
-          This is the first line of intro text.
+          The annual Robot Competition is a staple of the UBC Engineering Physics program.
+          <br />
+          <br />
+          This year, for the first time ever, teams had to make two robots to work alongside each other.
+          In conjunction, they would attempt to assemble various meals consisting of 3D-printed food items, and serve them on a plate.
         </h6>
         <h6 className={`robotcomp-text ${!visibility.introtext2 ? "hidden" : ""}`}>
-          This is the second line of intro text.
+          The amount of knowledge and learning to be gained from this project was extraordinary, however on top of this,
+          <br />
+          my team and I had our eyes set on the lofty goal of winning the competition. 
         </h6>
-        <h6 className={`robotcomp-text ${!visibility.introtext3 ? "hidden" : ""}`}>
-          This is the third line of intro text.
-        </h6>
+        <div className="robotcomp-video-container">
+          <video autoPlay muted loop controls className="background-video">
+            <source src="/images/robot_action_shot.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+          </video>
+          <h6 class="robotcomp-text">
+            This is some intro text over the video background.
+          </h6>
+        </div>
       </div>
     </div>
   );
