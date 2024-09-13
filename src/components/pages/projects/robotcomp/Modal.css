@@ -1,0 +1,61 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+/* The modal content box */
+.modal-content {
+    margin-top: 70px;
+    width: 1370px;
+    height: 650px;
+    background-color: whitesmoke;
+    padding: 20px;
+    border-radius: 0px;
+    color: white;
+    text-align: center;
+    overflow-y: auto;
+}
+
+.modal-title {
+    font-size: 46px;
+    font-weight: 1500;
+    color: black;
+    text-align: left;
+    margin-top: 30px;
+    margin-left: 57px;
+}
+
+/* Text inside the modal */
+.modal-text {
+    font-size: 20px;
+    color: black;
+    max-width: 1700px;
+    align-content: left;
+}
+
+/* The close button */
+.modal-button {
+    position: absolute;
+    top: 120px;
+    right: 120px;
+    background-color: white;
+    color: black;
+    padding: 15px 25px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    z-index: 11;
+}
+
+.modal-button:hover {
+    background-color: #e0e0e0;
+}

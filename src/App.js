@@ -13,7 +13,7 @@ import Calculator from "./components/pages/projects/Calculator";
 import Website from "./components/pages/projects/Website";
 import MachineShop from "./components/pages/projects/MachineShop";
 import SeaLevels from "./components/pages/projects/SeaLevels";
-import RobotComp from "./components/pages/projects/RobotComp";
+import RobotComp from "./components/pages/projects/robotcomp/RobotComp";
 import PCBDesign from "./components/pages/projects/PCBDesign";
 import MotorControl from "./components/pages/projects/MotorControl";
 
