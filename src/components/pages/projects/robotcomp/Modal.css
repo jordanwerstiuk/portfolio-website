@@ -20,15 +20,15 @@
     padding: 20px;
     border-radius: 0px;
     color: white;
-    text-align: center;
     overflow-y: auto;
+    
 }
 
 .modal-title {
     font-size: 46px;
     font-weight: 1500;
     color: black;
-    text-align: left;
+    text-align: justify;
     margin-top: 30px;
     margin-left: 57px;
 }
@@ -37,7 +37,9 @@
 .modal-text {
     font-size: 20px;
     color: black;
-    max-width: 1700px;
+    margin-top: 100px;
+    margin-left: 130px;
+    max-width: 1100px;
     align-content: left;
 }
 
@@ -59,3 +61,59 @@
 .modal-button:hover {
     background-color: #e0e0e0;
 }
+
+.modal-image,
+.im-left,
+.im-right,
+.gm-left,
+.gm-right {
+  position: relative;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  margin-left: 280px;
+  z-index: 10;
+  width: 45%;
+  object-fit: cover;
+}
+
+.im-left {
+    width: 75%;
+    margin-left: 130px;
+}
+
+.im-right {
+    width: 130%;
+    margin-left: -170px;
+}
+
+.gm-left {
+    width: 89.8%;
+    margin-left: 80px;
+}
+
+.gm-right {
+    width: 89.3%;
+    margin-left: -40px;
+}
+
+.content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Aligns the text and image at the top */
+    max-width: 1200px; /* Adjust based on your design */
+    width: 100%; /* Ensure the content takes the full width */
+  }
+  
+  .image-content {
+    position: relative;
+    flex-shrink: 1; /* Prevents the image from shrinking */
+    max-width: 500px; /* Adjust this value based on your design */
+  }
+
+  .test-run-video {
+    width: 800px;
+    height: auto;
+    margin-left: 150px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
