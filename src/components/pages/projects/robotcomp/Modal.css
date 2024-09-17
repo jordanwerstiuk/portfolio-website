@@ -58,7 +58,19 @@
     z-index: 11;
 }
 
-.modal-button:hover {
+.zoom-button {
+    background-color: white;
+    color: black;
+    padding: 15px 15px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    z-index: 11;
+}
+
+.modal-button:hover,
+.zoom-button:hover {
     background-color: #e0e0e0;
 }
 
@@ -66,7 +78,9 @@
 .im-left,
 .im-right,
 .gm-left,
-.gm-right {
+.gm-right,
+.jm-left,
+.bubs {
   position: relative;
   margin-top: 40px;
   margin-bottom: 40px;
@@ -91,9 +105,19 @@
     margin-left: 80px;
 }
 
+.jm-left {
+    width: 84.5%;
+    margin-left: 80px;
+}
+
 .gm-right {
     width: 89.3%;
-    margin-left: -40px;
+    margin-left: -0px;
+}
+
+.bubs {
+    width: 60%;
+    margin-left: 220px;
 }
 
 .content-wrapper {

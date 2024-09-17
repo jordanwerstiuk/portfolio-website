@@ -1,3 +1,5 @@
+import ZoomComponent from "./ZoomComponent";
+
 let timelineElements = [
     {
       id: 1,
@@ -6,7 +8,36 @@ let timelineElements = [
         "Our team used two PCBs: an H-bridge and a tape sensing circuit, which I designed in KiCad. In this section I mainly discuss the considerations that went into creating them.",
       icon: "pcb",
       content:
-        "PCB Design content"
+        <div>
+          <ZoomComponent 
+            url="/images/doublehbridgeschematic.png"
+            alt="Double H-bridge KiCad Schematic"
+            className="bubs"
+            buttonTop="26px"
+            buttonLeft="700px"  
+          />
+          Test text........
+          <div className="content-wrapper">
+            <div className="image-content">
+              <ZoomComponent 
+                url="/images/hbridgepcbeditor.png"
+                alt="Double H-bridge KiCad PCB Editor"
+                className="jm-left"
+                buttonTop="26px"
+                buttonLeft="260px"  
+              />            
+            </div>
+            <div className="image-content">
+            <ZoomComponent 
+                url="/images/hbridge3dmodel.png"
+                alt="Double H-bridge KiCad 3D Viewer"
+                className="gm-right"
+                buttonTop="26px"
+                buttonLeft="205px"  
+              /> 
+            </div>
+          </div>
+        </div>
     },
     {
       id: 2,
