@@ -21,7 +21,7 @@
     border-radius: 0px;
     color: white;
     overflow-y: auto;
-    
+    overflow-x: hidden;
 }
 
 .modal-title {
@@ -80,7 +80,9 @@
 .gm-left,
 .gm-right,
 .jm-left,
-.bubs {
+.bubs,
+.om-left,
+.om-right {
   position: relative;
   margin-top: 40px;
   margin-bottom: 40px;
@@ -88,6 +90,16 @@
   z-index: 10;
   width: 45%;
   object-fit: cover;
+}
+
+.om-left {
+    width: 75%;
+    margin-left: 130px;
+}
+
+.om-right {
+    width: 75%;
+    margin-left: 0px;
 }
 
 .im-left {
