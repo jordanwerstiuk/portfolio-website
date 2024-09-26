@@ -149,7 +149,47 @@ let timelineElements = [
         "Each of our robots used two LiPo batteries, which each required their own circuit board to properly distribute power to the other components. Here I discuss my reasoning when designing them.",
       icon: "pcb",
       content:
-        "Power Circuits content"
+        <div>
+          Our robot needed power. So, I that is exactly what I gave it! And I used two circuits, one for each battery, to power all the electrical components inside the robot. 
+          One of the LiPos was 4 cells (16.8V), used to power the motors, and the other was 2 cells (8.4V), used to power the ESP and other electrical components. 
+          I soldered switches onto the positive line of each of them, as well as a 10A fuse on the 4-cell battery. We never ended up blowing the fuse, but it was a necesssary precaution to have. 
+          <br /><br />When it came to designing the circuits, the first consideration was what voltage level/levels were needed. 
+          For the 4-cell, we didn't necessarily need to adjust the voltage, and we could have powered the motors with 16.8V. 
+          However, as the batteries lose charge, their voltage will decrease and the motors will spin slightly slower. 
+          If we let that happen and eventually decided to hard-code a portion of the robots movement, it could lead to problems. 
+          For example, having it drive forward for 500ms would go farther on a full charge than a low charge. 
+          <br /><br />As such, we used buck converters to step down to 12V. Buck converters are efficient, and are exactly what we needed given the amount of current we would be drawing from the battery.  
+          A component such as a voltage regulator in this scenario would burn too much power. 
+          The buck converters were rated for 2.5A, and given the approximate 1A max that we observed in the motors, 
+          we would need three of them.
+          <br /><br />Without further ado, take a look at the image below. I unfortunately never took a photo of the finished circuit, and we no longer have access to the robots. 
+          I designed the circuit by taking photos, overlaying them, and drawing on them.
+          <img src="/images/4cellpowercirc.jpg" alt="4-Cell LiPo Power Circuit" className="modal-image" />
+          <br />The main thing that sticks out is the connection on the left side. 
+          I dedicated a large area to cover with solder in order to secure the massive wires to the board. 
+          Additionally, I cut the board so that a ziptie could easily be placed to further secure the wires. 
+          Without the ziptie, when the wires get pulled around, there is stress on the solder connection, which could eventually become damaged. 
+          The ziptie moves the pivot point off of the solder connection, and pretty much no amount of yanking would be able to break it. 
+          <br /><br />We always made sure to twist the power and GND wires around each other to reduce any electromagnetic effects. 
+          We made an effort to keep our cable management organized, and we never had any issues with noise in our circuits.
+          Additionally, you'll notice that I placed two capacitors between power and GND. Batteries are a very common source of noise in circuits, 
+          and these capacitors are the first line of defense against that. If you read the PCB Design section, you will see the use of additional decoupling capacitors.
+          <br /><br /><br /><br />
+          The main consideration for the smaller circuit was which voltages were needed, and in which JST configurations. 
+          This time, buck converters would be overkill, and voltage regulators would do the trick.
+          This is because much less current was being drawn, as it wasn't powering the motors. 
+          We needed to bring the 8.4V down to 5V and 3.3V, and once all the connections were planned out, the circuit was pretty much done. 
+          I added capacitors like before for noise reduction, and we also later added an indicator LED which let us know if we ever accidently forgot to flip the switch off when we weren't running the robot 
+          (and we did the same for the other power circuit).
+          <img src="/images/2cellpowercirc.jpg" alt="2-Cell LiPo Power Circuit" className="modal-image" />
+          <br />Finally, take a look at our first robot at an early stage, when we were just getting the wheels spinning. If you look carefully at the top side, 
+          you can see both the power circuits. For the smaller one, we added heat sinks on the voltage regulators, as well as some extra connectors.
+          <video muted controls className="power-circuit-video">
+            <source src="/images/powercircuitvid.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+          </video>
+          <br /><br /><br />Thanks for checking out this section! Please be sure to check the other sections (especially the firmware ones)!<br /><br /><br /><br />
+        </div>
     },
     {
       id: 3,
