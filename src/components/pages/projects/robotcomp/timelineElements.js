@@ -195,7 +195,7 @@ let timelineElements = [
       id: 3,
       title: "Countertop Navigation",
       description:
-        "These robots were autonomous, meaning we couldn't be there to control where they went. Instead, I programmed a numbering system to allow the robot to be able to deduce how to navigate between any two places on the countertop.",
+        "These robots were autonomous, meaning we couldn't be there to control where they went. Instead, I programmed a numbering system to allow the robot to be able to deduce how to navigate between any two stations on the countertop.",
       icon: "mcu",
       content:
         <div>
@@ -294,7 +294,70 @@ let timelineElements = [
         "As is seen in the video above, our robots swept in items with a long arm, as well as lowered/raised their internal elevator. Achieving that precision and coordination took time and testing.",
       icon: "mcu",
       content:
-        "Arm & Elevator Control content"
+        <div>
+          Now that our robot was well on it's way to being fully constructed, I could get started on testing approaches for controlling the sweeper and elevator. 
+          To clarify what I mean by arm and sweeper, here is a video of them moving simulatenously.
+          <video muted controls className="adjust-demo-video">
+            <source src="/images/burger_adjust_demo.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+          </video>
+          <br />I filmed the above video to send to the rest of my team after I had gotten the above to work. 
+          It's purpose was to adjust the burger into a more well-stacked position before serving it. 
+          First, the sweeper retracts to pull the top bun onto the rest of the burger, then the elevator raises, 
+          and the sweeper retracts back a small amount so that the patty and top bun became centred on the burger. 
+          It would take a while to explain why this was the best way to fix it, but it made a noticeable difference in the quality of burgers it served. 
+          The point of this section is to explain the code (as well as some electrical components) that allowed me to make create movement sequences like the one shown. 
+          <br /><br />
+          The essence of the design were two rails, one horizontal for the sweeper, and one vertical for the elevator. 
+          Each was connected through a gear mechanism to a rotary encoder. 
+          Additionally, we placed limit switches as "resets", so that any small errors in the signal received from the encoders would not accumulate. 
+          Each encoder and switch were attached to their own interrupts. I'll start by explaining the encoder interrupts.
+          <img src="/images/sweepencoderinterrupt.png" alt="Rotary encoder interrupt for sweeper" className="bubs" />
+          <br />Hopefully it is clear from my code that I try to make it as readable as possible. 
+          For this project I added high level comments for some functions, however if I was working with a team, 
+          I would have added more elaborate comments in the header files. 
+          Additionally, I try my best to avoid magic numbers, instead creating variables with descriptive names. 
+          I always add white space in what I take to be a sensible manner (messy code bothers me). 
+          <br /><br />The crux of this function is how it handles the signals from the encoder. 
+          But before I explain the above method, I'll explain what we were originally using:
+          <img src="/images/oldsweepinterrupt.png" alt="Old rotary encoder interrupt for sweeper" className="bubs" />
+          <br />In order to explain, I will reference the following diagram for quadrature encoders:
+          <img src="/images/oldquadratureencoder.png" alt="Pulse channels for quadrature encoders (previous method)" className="bubs" />
+          <br />In separate initialization code, the interrupt function is set to be triggered upon a detected rising edge in SWEEP_ENCODER_1, named Channel A in the diagram. 
+          I've marked red dots indicating the values of the two channels at the rising edges of Channel A. A simple differentiation between a clockwise and counterclockwise rotation was checking whether or not the values from the two channels were equal, as is done in the code above. 
+          This worked well and provided enough precision for the sweeper, but the elevator required more precision. Given our gear ratio, each pulse we measured from the elevator's encoder indicated 1.636mm of vertical displacement (this constant is referred to as SWEEP_PULSE_DISTANCE in the code). 
+          Our strategy involved aligning the partially stacked burger perfectly at the height of the counter to sweep on the next item, and in combination with random variation, an accuracy of only about 2mm wasn't ideal. 
+          To improve on this, my teammate and I updated the method in which we analyzed the encoder channels. 
+          By reading the current values and comparing them with the <i>previous</i> values. This can be done at every transition of either channel, which is 4 times more often than the previous method, as indicated in the below diagram. 
+          <img src="/images/newquadratureencoder.png" alt="Pulse channels for quadrature encoders (updated method)" className="bubs" />
+          <br />Here is the relevant part of the updated interrupt function:
+          <img src="/images/sweepinterruptfirst.png" alt="Rotary encoder channel analysis" className="bubs" />
+          <br />The first few lines of the function perform bitwise operations to combine the 2 new values with the two previous.
+          This leaves us with a single 4-bit value that can directly indicate whether the function call was triggered by a cw or ccw encoder rotation. 
+          By using a table to keep track of combinations of values and referencing the quadrature diagram it isn't too difficult to account for all the possible scenarios.
+          I remember being happy to see this working the first time we tested it. 
+          <br /><br />With this change, our accuracy for the elevator was now 0.409mm, which helped marginally. 
+          Nevertheless we later changed our strategy just slightly, which mostly nullified the benefit that this modification provided. 
+          We made it so that the items being swept on would drop down onto the burger. 
+          This was because some counters were higher than others, and when the competition surfaces would get moved down and rebuilt in the theatre, the heights could change on the day of the competition. 
+          This meant it would be too risky to rely on having our robots perfectly align with the height of the counters. 
+          <br /><br />I'll now explain the second half of the interrupt function and how it accounted to various aspects of our mechanical design. 
+          Once again, here is the relevant code section:
+          <img src="/images/sweepinterruptsecond.png" alt="Sweep encoder interrupt distance checks" className="bubs" />
+          <br />
+          TODO:
+            - explain need for slowing down when extending
+            - explain overshoot distance
+            - possible explain where distanceToSweep comes from
+          <div className="content-wrapper">
+            <div className="image-content">
+              <img src="/images/sweepswitchinterrupt.png" alt="Limit switch interrupt for sweeper" className="gm-left" />
+            </div>
+            <div className="image-content">
+              <img src="/images/stopsweeperfunction.png" alt="stopSweeper function" className="jm-right" />
+            </div>
+          </div>
+        </div>
     },
   ];
   
