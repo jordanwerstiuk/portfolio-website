@@ -18,9 +18,6 @@ function Footer() {
         <div>
           <h2>Contact Me:</h2>
           <p className="contact-me-email">Email: jordanwerstiuk@gmail.com</p>
-          <p className="contact-me-subtext">
-            (My LinkedIn is in the top-left)
-          </p>
         </div>
       </section>
     </div>

@@ -27,7 +27,7 @@ function Website() {
           <br />
             I was able to get started using React on my own by following guides online.
             Once I had an intuition for how the code was structured, I was able to start freestyling my own pages and features.
-            For new features, such as scrolling up or down on the click of a button, I would once again look for help online.
+            For new features, such as automatic scrolling up or down upon the click of a button, I would once again look for help online.
             It's amazing how easy something can be if you just enjoy doing it! 
           </h6>
           <h6 className="website-text">
@@ -39,6 +39,12 @@ function Website() {
           <img src="/images/website_code_example.png" alt="Code snippet image" className="website-image" />
           </div>
         </div>
+        <h6 className="bottom-text">
+          As you look through the website, you'll probably notice (or maybe you already have) that while some pages look rather basic (such as this one), 
+          others look nicer. As I made more pages I tried to make them better and better, and I spent more time on my favourite projects. 
+          As of writing this, the best page is definitely Robot Competition 2024 (under class projects), so make sure you take a look at that one. 
+          This website is a constant work in progress, so check back for new projects that I'll be adding!
+        </h6>
       </div>
     </div>
   );

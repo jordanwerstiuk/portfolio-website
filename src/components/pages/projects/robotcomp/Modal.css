@@ -74,14 +74,10 @@
 }
 
 .modal-image,
-.im-left,
-.im-right,
-.gm-left,
-.gm-right,
-.jm-left,
-.bubs,
-.om-left,
-.om-right {
+.im-left, .im-right, .gm-left, .gm-right, .jm-left,
+.bubs, .subs, .lubs,
+.om-left, .om-right,
+.interrupt {
   position: relative;
   margin-top: 40px;
   margin-bottom: 40px;
@@ -129,6 +125,21 @@
 .bubs {
     width: 60%;
     margin-left: 220px;
+}
+
+.subs {
+    width: 40%;
+    margin-left: 330px;
+}
+
+.lubs {
+    width: 40%;
+    margin-left: 384px;
+}
+
+.interrupt {
+    width: 61%;
+    margin-left: 180px;
 }
 
 .content-wrapper {
