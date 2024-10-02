@@ -4,11 +4,12 @@ import "./Calculator.css";
 function Calculator() {
   return (
     <div>
-      <div className="calculator-container-title">
+      {/* <div className="calculator-container-title">
         <h1 className="calculator-h1">STM32 CALCULATOR</h1>
-      </div>
+      </div> */}
       <div className="calculator-container-main">
-        <h5 className="date-text">
+        <img src="/images/pageunderconstruction.gif" alt="Page under construction caution tape" className="caution-tape" />
+        {/* <h5 className="date-text">
           April 2024 - Present
         </h5>
         <div className="content-wrapper">
@@ -18,7 +19,7 @@ function Calculator() {
           <div className="image-content">
             <img src="/images/holder_unfolded.jpg" alt="Code image" className="calculator-image" />
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

@@ -16,6 +16,7 @@ import SeaLevels from "./components/pages/projects/SeaLevels";
 import RobotComp from "./components/pages/projects/robotcomp/RobotComp";
 import PCBDesign from "./components/pages/projects/PCBDesign";
 import MotorControl from "./components/pages/projects/MotorControl";
+import SimAutDrivComp from "./components/pages/projects/SimAutDrivComp";
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
           <Route path="/pcbdesign" element={<PCBDesign />} />
           <Route path="/robotcomp" element={<RobotComp />} />
           <Route path="/sealevels" element={<SeaLevels />} />
+          <Route path="/simautdrivcomp" element={<SimAutDrivComp />} />
         </Routes>
         <Footer />
       </Router>

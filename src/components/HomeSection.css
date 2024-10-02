@@ -37,7 +37,7 @@ img {
 
 .home-btns-row2,
 .home-btns-row4 {
-    margin-top: 35px;
+    margin-top: 25px;
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* Two columns */
     gap: 10px;

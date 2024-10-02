@@ -39,6 +39,11 @@
     font-size: 25px;
 }
 
+.btn-simaut {
+    padding: 60px 60px;
+    margin-top: -10px;
+}
+
 .btn--medium:hover, .btn--large:hover, .btn--huge:hover {
     background: #fff;
     color: #242424;

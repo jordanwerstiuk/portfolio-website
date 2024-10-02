@@ -153,3 +153,29 @@
       transition: 250ms;
     }
   }
+
+  .back-button {
+    position: fixed;
+    top: 90px; /* Adjust this to place it just below the navbar */
+    left: 20px; /* Position it on the left side of the screen */
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 1000;
+    transition: color 0.3s ease;
+  }
+  
+  .back-button:hover {
+    color: #ffc400; /* Change color on hover */
+  }
+
+  .fa-arrow-left {
+    font-size: 30px;
+    text-shadow: 
+        -1px -1px 0 #000,  
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+  }

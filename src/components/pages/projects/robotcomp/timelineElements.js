@@ -150,7 +150,7 @@ let timelineElements = [
       icon: "pcb",
       content:
         <div>
-          Our robot needed power. So, I that is exactly what I gave it! And I used two circuits, one for each battery, to power all the electrical components inside the robot. 
+          Our robot needed power. So, that is exactly what I gave it! And I used two circuits, one for each battery, to power all the electrical components inside the robot. 
           One of the LiPos was 4 cells (16.8V), used to power the motors, and the other was 2 cells (8.4V), used to power the ESP and other electrical components. 
           I soldered switches onto the positive line of each of them, as well as a 10A fuse on the 4-cell battery. We never ended up blowing the fuse, but it was a necesssary precaution to have. 
           <br /><br />When it came to designing the circuits, the first consideration was what voltage level/levels were needed. 

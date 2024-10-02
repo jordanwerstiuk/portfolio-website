@@ -12,9 +12,9 @@ function HomeSection() {
           className="btns"
           buttonStyle="btn--outline"
           buttonSize="btn--huge"
-          to="/personalprojects"
+          to="/classprojects"
         >
-          PERSONAL PROJECTS
+          CLASS PROJECTS
         </Button>
       </div>
       <div className="home-btns-row2">
@@ -22,17 +22,17 @@ function HomeSection() {
           className="btns"
           buttonStyle="btn--outline"
           buttonSize="btn--huge"
-          to="/workshopcourses"
+          to="/personalprojects"
         >
-          WORKSHOP COURSES
+          PERSONAL PROJECTS
         </Button>
         <Button
           className="btns"
           buttonStyle="btn--outline"
           buttonSize="btn--huge"
-          to="/classprojects"
+          to="/workshopcourses"
         >
-          CLASS PROJECTS
+          WORKSHOP COURSES
         </Button>
       </div>
     </div>

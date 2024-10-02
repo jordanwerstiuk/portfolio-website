@@ -7,7 +7,7 @@ function ClassProjSection() {
   return (
     <div className="classprojects">
       <h1>CLASS PROJECTS</h1>
-      <div className="home-btns-row3">
+      <div className="home-btns-row2">
         <Button
           className="btns"
           buttonStyle="btn--outline"
@@ -15,6 +15,14 @@ function ClassProjSection() {
           to="/robotcomp"
         >
           ROBOT COMPETITION 2024
+        </Button>
+        <Button
+          className="btns"
+          buttonStyle="btn--outline"
+          buttonSize="btn-simaut"
+          to="/simautdrivcomp"
+        >
+          SIMULATED AUTONOMOUS DRIVING COMPETITION
         </Button>
         <Button
           className="btns"

@@ -4,11 +4,12 @@ import "./SeaLevels.css";
 function SeaLevels() {
   return (
     <div>
-      <div className="sealevels-container-title">
+      {/* <div className="sealevels-container-title"
         <h1 className="sealevels-h1">SEA LEVELS PROGRAM</h1>
-      </div>
+      </div> */}
       <div className="sealevels-container-main">
-        <h5 className="date-text">
+        <img src="/images/pageunderconstruction.gif" alt="Page under construction caution tape" className="caution-tape" />
+        {/* <h5 className="date-text">
           November 2023
         </h5>
         <div className="content-wrapper">
@@ -18,7 +19,7 @@ function SeaLevels() {
           <div className="image-content">
             <img src="/images/holder_unfolded.jpg" alt="Code image" className="sealevels-image" />
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );
