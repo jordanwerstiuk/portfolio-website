@@ -83,7 +83,7 @@ function RobotComp() {
           <br />
           The finals were neck and neck, with both teams churning out deluxe burgers.
           <br />
-          Ultimately, we came second by the skin of our teeth.
+          Ultimately, we came second in an exhilirating final matchup.
         </h6>
         <h6 className={`robotcomp-text ${!visibility.introtext4 ? "hidden" : ""}`}>
           For the rest of this page, I will cover my various contributions to our robots.

@@ -7,8 +7,8 @@ img {
 }
 
 .home-container {
-    background: url('../../public/images/ubc_image.jpg') center center/cover
-    no-repeat;
+    /* background: url('../../public/images/ubc_image.jpg') center center/cover
+    no-repeat; */
     height: 82.5vh;
     width: 100%;
     display: flex;
@@ -17,6 +17,10 @@ img {
     align-items: center;
     box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.2);
     object-fit: contain;
+    transition: background-image 0.75s ease-in-out;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .home-container > h1 {

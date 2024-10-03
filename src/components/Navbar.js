@@ -55,7 +55,7 @@ function Navbar() {
     <>
       <nav className="navbar">
         <div className="navbar-container">
-          Jordan Werstiuk
+          &nbsp;&nbsp;&nbsp;&nbsp;Jordan Werstiuk
           <a
             href="https://www.linkedin.com/in/jordanwerstiuk"
             className="navbar-logo"
@@ -90,12 +90,12 @@ function Navbar() {
             </Button>
           )}
         </div>
-      </nav>
-      {window.location.pathname !== "/" && (
+        {window.location.pathname !== "/" && (
         <button className="back-button" onClick={handleBack}>
           <i class="fa fa-arrow-left" aria-hidden="true"></i>
         </button>
-      )}
+        )}
+      </nav>
     </>
   );
 }
