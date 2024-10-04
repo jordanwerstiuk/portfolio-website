@@ -10,16 +10,16 @@ function FeaturedProjects() {
         <div className="featured_wrapper">
           <ul className="featured_projects">
             <Featured
-              src="images/ubc_image.jpg"
-              text="STM32 Calculator"
-              label="Personal Projects"
-              path="/calculator"
-            />
-            <Featured
-              src="images/ubc_image.jpg"
+              src="images/robotfinalphoto.png"
               text="Robot Competition 2024"
               label="Class Projects"
               path="/robotcomp"
+            />
+            <Featured
+              src="images/ubc_image.jpg"
+              text="Custom Calculator"
+              label="Personal Projects"
+              path="/calculator"
             />
           </ul>
         </div>

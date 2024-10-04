@@ -10,6 +10,13 @@ import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeli
 
 import "react-vertical-timeline-component/style.min.css"
 
+const thresholds = {
+  introtext1: 525,
+  introtext2: 710,
+  introtext3: 2200,
+  introtext4: 2400,
+};
+
 function RobotComp() {
   const [showModal, setShowModal] = useState(false);
   const [selectedElement, setSelectedElement] = useState(null);
@@ -20,14 +27,6 @@ function RobotComp() {
     introtext3: false,
     introtext4: false,
   });
-
-  // Define the scroll thresholds for each element
-  const thresholds = {
-    introtext1: 525,
-    introtext2: 710,
-    introtext3: 2200,
-    introtext4: 2400,
-  };
 
   useEffect(() => {
     const handleScroll = () => {

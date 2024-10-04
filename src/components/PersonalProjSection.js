@@ -14,7 +14,7 @@ function PersonalProjSection() {
           buttonSize="btn--huge"
           to="/calculator"
         >
-          STM32 CALCULATOR
+          CUSTOM CALCULATOR
         </Button>
         <Button
           className="btns"

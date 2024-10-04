@@ -5,7 +5,7 @@ function Calculator() {
   return (
     <div>
       {/* <div className="calculator-container-title">
-        <h1 className="calculator-h1">STM32 CALCULATOR</h1>
+        <h1 className="calculator-h1">CUSTOM CALCULATOR</h1>
       </div> */}
       <div className="calculator-container-main">
         <img src="/images/pageunderconstruction.gif" alt="Page under construction caution tape" className="caution-tape" />
